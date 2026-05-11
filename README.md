@@ -24,21 +24,34 @@ It includes an anti-overstacking check: when 5 or more principles are already st
 
 ## Install
 
-Clone into your Claude Code skills directory:
+This is a Claude Code plugin. Two install paths:
+
+### Option 1: Marketplace install (once approved)
+
+```
+/plugin install cialdini-influence-audit
+```
+
+Submission to the official Anthropic marketplace is pending. Until then, use Option 2.
+
+### Option 2: Direct plugin install (works today)
+
+Clone the repo anywhere, then load it with the `--plugin-dir` flag:
 
 ```bash
-git clone https://github.com/johnericforte/claude-skill-cialdini-influence-audit.git ~/.claude/skills/cialdini-influence-audit
+git clone https://github.com/johnericforte/claude-skill-cialdini-influence-audit.git ~/claude-plugins/cialdini-influence-audit
+claude --plugin-dir ~/claude-plugins/cialdini-influence-audit
 ```
 
-Restart Claude Code (or start a new session). The skill will be available via the `Skill` tool.
+To verify the plugin loaded, run `/help` in Claude Code. You should see `cialdini-influence-audit:audit` listed.
 
-To verify it loaded, ask Claude:
+### Invocation
+
+Once loaded, invoke the skill with the plugin-namespaced name:
 
 ```
-What does the cialdini-influence-audit skill do?
+/cialdini-influence-audit:audit
 ```
-
-If the skill is installed correctly, Claude reads its description from `SKILL.md` and answers based on that.
 
 ### Optional dependency: `humanizer`
 
@@ -47,6 +60,8 @@ The skill works best with the [`humanizer`](https://github.com/blader/humanizer)
 ```bash
 git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer
 ```
+
+`humanizer` is a standalone skill (not a plugin), so it installs to the standard `~/.claude/skills/` directory.
 
 If you decline, the skill ships the audit without the humanizer pass and labels it accordingly.
 
@@ -57,7 +72,7 @@ If you decline, the skill ships the audit without the humanizer pass and labels 
 Once installed, invoke the skill via Claude:
 
 ```
-Use the cialdini-influence-audit skill on this cold email:
+Use the cialdini-influence-audit:audit skill on this cold email:
 
 "Hi [First Name],
 I noticed your company is in the SaaS space and thought you might be

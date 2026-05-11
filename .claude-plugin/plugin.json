@@ -1,0 +1,12 @@
+{
+  "name": "cialdini-influence-audit",
+  "description": "Audit persuasive copy (landing page, email, sales sequence, cold pitch) for missing influence principles using Robert Cialdini's seven principles from Influence (1984/2016) and Pre-Suasion (2016). Returns a per-principle audit with prioritized fixes.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Eric Forte",
+    "url": "https://www.ericforte.com"
+  },
+  "homepage": "https://github.com/johnericforte/claude-skill-cialdini-influence-audit",
+  "repository": "https://github.com/johnericforte/claude-skill-cialdini-influence-audit",
+  "license": "MIT"
+}

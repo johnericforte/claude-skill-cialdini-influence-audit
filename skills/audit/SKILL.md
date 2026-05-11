@@ -1,5 +1,4 @@
 ---
-name: cialdini-influence-audit
 description: Audit persuasive copy (landing page, email, sales sequence, cold pitch) for missing influence principles using Robert Cialdini's seven principles from Influence (1984/2016) and Pre-Suasion (2016). Returns a per-principle audit with a prioritized fix list. Optional pre-audit research mode for audience profile, opener context, and social-proof fact-check.
 ---
 
@@ -277,9 +276,9 @@ Not triggered (the email is currently understacked, not overstacked). The 3 fixe
 
 ## Companion skills
 
-- **`hormozi-offer-audit`** — for the OFFER side of the same copy (Value Equation, Grand Slam, lead magnet quality bar). Run on the same page after the Cialdini audit to find missing offer levers. Cialdini audits the persuasion mechanics; hormozi-offer-audit audits the offer construction. Repo: `https://github.com/johnericforte/claude-skill-hormozi-offer-audit`.
-- **`claude-blog-assistant`** — if the persuasive copy lives inside a blog post, this orchestrator wraps the full publishing lifecycle (brief → write → humanize → SEO check → schema → analyze → repurpose) AND audits existing posts. Pair the Cialdini audit with the blog-assistant publishing flow when shipping new content. Repo: `https://github.com/johnericforte/claude-skill-blog-assistant`.
-- **`humanizer`** — invoked automatically as the final pass on the audit's "After" copy if installed. Repo: `https://github.com/blader/humanizer`.
+- **`hormozi-offer-audit:audit`** — for the OFFER side of the same copy (Value Equation, Grand Slam, lead magnet quality bar). Run on the same page after the Cialdini audit to find missing offer levers. Cialdini audits the persuasion mechanics; hormozi-offer-audit audits the offer construction. Repo: `https://github.com/johnericforte/claude-skill-hormozi-offer-audit`.
+- **`claude-blog-assistant:assistant`** — if the persuasive copy lives inside a blog post, this orchestrator wraps the full publishing lifecycle (brief → write → humanize → SEO check → schema → analyze → repurpose) AND audits existing posts. Pair the Cialdini audit with the blog-assistant publishing flow when shipping new content. Repo: `https://github.com/johnericforte/claude-skill-blog-assistant`.
+- **`humanizer`** — invoked automatically as the final pass on the audit's "After" copy if installed (standalone skill, not plugin-namespaced). Repo: `https://github.com/blader/humanizer`.
 
 ---
 
