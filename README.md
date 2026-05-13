@@ -4,6 +4,8 @@
 [![Built for Claude](https://img.shields.io/badge/Built%20for-Claude-D97757)](https://claude.com)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](#)
 
+**Full write-up:** [ericforte.com/blog/3-claude-code-skills-i-built](https://www.ericforte.com/blog/3-claude-code-skills-i-built)
+
 > A Claude skill that audits persuasive copy (landing page, email, sales sequence, cold pitch) for missing influence principles using Robert Cialdini's seven principles from Influence (1984/2016) and Pre-Suasion (2016). Returns a per-principle audit with prioritized fixes.
 
 You drop your copy into Claude. The skill scores each of the 7 principles as PRESENT, WEAK, or MISSING, audits the opener for Pre-Suasion attentional channeling, and returns a Top 3 Fixes block you can ship the same day.
