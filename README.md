@@ -24,19 +24,13 @@ It includes an anti-overstacking check: when 5 or more principles are already st
 
 ## Install
 
-This is a Claude Code plugin. Two install paths:
+Skills do not sync across surfaces (per [Anthropic's Agent Skills docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#cross-surface-availability)). Install on each surface where you want to run this skill.
 
-### Option 1: Marketplace install (once approved)
+### Claude Code (CLI)
 
-```
-/plugin install cialdini-influence-audit
-```
+Two paths. Use git clone today; the plugin marketplace listing is pending Anthropic approval.
 
-Submission to the official Anthropic marketplace is pending. Until then, use Option 2.
-
-### Option 2: Direct plugin install (works today)
-
-Clone the repo anywhere, then load it with the `--plugin-dir` flag:
+**Option A: git clone (works today).** Clone the repo and load it with the `--plugin-dir` flag:
 
 ```bash
 git clone https://github.com/johnericforte/claude-skill-cialdini-influence-audit.git ~/claude-plugins/cialdini-influence-audit
@@ -45,9 +39,19 @@ claude --plugin-dir ~/claude-plugins/cialdini-influence-audit
 
 To verify the plugin loaded, run `/help` in Claude Code. You should see `cialdini-influence-audit:audit` listed.
 
-### Invocation
+**Option B: Plugin marketplace (pending Anthropic approval).** Once the listing lands:
 
-Once loaded, invoke the skill with the plugin-namespaced name:
+```
+/plugin install cialdini-influence-audit
+```
+
+### claude.ai (web) / Claude Desktop
+
+ZIP the `skills/audit/` directory and upload it via **Settings → Features → Skills** on claude.ai. The skill syncs to Claude Desktop through your account. Requires a Pro, Max, Team, or Enterprise plan with code execution enabled. See [Anthropic's docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) for plan requirements and limits.
+
+### Invocation (Claude Code)
+
+Once loaded in Claude Code, invoke the skill with the plugin-namespaced name:
 
 ```
 /cialdini-influence-audit:audit
